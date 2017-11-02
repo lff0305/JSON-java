@@ -14,6 +14,13 @@ public class TestJSONObject {
     }
 
     @Test
+    public void testValue1() {
+        JSONObject o = new JSONObject();
+
+        System.out.println(o.optJSONObject("a").optJSONObject("b"));
+    }
+
+    @Test
     public void testArray() {
         JSONObject o = new JSONObject();
         System.out.println(o.optJSONArray("a").optJSONObject(123));
