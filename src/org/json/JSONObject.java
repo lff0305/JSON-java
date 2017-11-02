@@ -1,5 +1,4 @@
 package org.json;
-
 import java.io.Closeable;
 
 /*
@@ -1276,7 +1275,7 @@ public class JSONObject {
      */
     public JSONArray optJSONArray(String key) {
         Object o = this.opt(key);
-        return o instanceof JSONArray ? (JSONArray) o : null;
+        return o instanceof JSONArray ? (JSONArray) o : new JSONArray();
     }
 
     /**
@@ -1289,7 +1288,7 @@ public class JSONObject {
      */
     public JSONObject optJSONObject(String key) {
         Object object = this.opt(key);
-        return object instanceof JSONObject ? (JSONObject) object : null;
+        return object instanceof JSONObject ? (JSONObject) object : new JSONObject();
     }
 
     /**

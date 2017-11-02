@@ -797,7 +797,7 @@ public class JSONArray implements Iterable<Object> {
      */
     public JSONArray optJSONArray(int index) {
         Object o = this.opt(index);
-        return o instanceof JSONArray ? (JSONArray) o : null;
+        return o instanceof JSONArray ? (JSONArray) o : new JSONArray();
     }
 
     /**
@@ -811,7 +811,7 @@ public class JSONArray implements Iterable<Object> {
      */
     public JSONObject optJSONObject(int index) {
         Object o = this.opt(index);
-        return o instanceof JSONObject ? (JSONObject) o : null;
+        return o instanceof JSONObject ? (JSONObject) o : new JSONObject();
     }
 
     /**
